@@ -55,20 +55,8 @@ class _chatInsideState extends State<chatInside> {
 
               var input = _textController.text;
               _textController.clear();
-              // setState(() {
-              //   isLoading = false;
-              //     _messages.add(
-              //       ChatMessage(
-              //         text: 'hi',
-              //         reaction: 'None',
-              //         chatMessageType: 'assistant',
-              //         time:tdata,
-              //       ),
-              //     );
-              // });
-              Future.delayed(const Duration(milliseconds: 50))
-                  .then((_) => _scrollDown());
-                  generateResponse(input,_messages).then((value) {
+              Future.delayed(const Duration(milliseconds: 50)).then((_) => _scrollDown());
+              generateResponse(input,_messages).then((value) {
                 setState(() {
                   isLoading = false;
                   _messages.add(
