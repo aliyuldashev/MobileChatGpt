@@ -7,7 +7,7 @@ import 'dart:convert';
 final translator = GoogleTranslator();
 
 Future<String> generateGpt(String prompt, List data) async {
-  const apiKey = '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';
+  const apiKey = 'YOUR OWN APIKEY';
 
 
   var url = Uri.https("api.openai.com", "/v1/chat/completions");
